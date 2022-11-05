@@ -92,7 +92,7 @@ export default function App() {
 
   //runs when play again is clicked
   function restartQuiz() {
-    setQuiz(false);
+    setQuestionList([]);
     setShowAnswers(false);
     setCount((count) => count + 1);
   }
@@ -109,8 +109,18 @@ export default function App() {
     );
   });
 
+  // Loading while the questions are being fetched
+  if (questionList.length === 0) {
+    return (
+      <div className="loading">
+      <div className="loading__spinner"></div>
+      </div>
+  )
+  }
+
   return (
     <main>
+      <img src='src/assests/yellow-blob.png' alt='yellow-blob'  className='yellow-blob'/>
       {!quiz ? (
         <div className='start-page'>
           <h1>Quizzical</h1>
@@ -137,6 +147,7 @@ export default function App() {
           </div>
         </div>
       )}
+      <img src='src/assests/blue-blob.png' alt='pink-blob' className='blue-blob'/>
     </main>
   );
 }
