@@ -120,7 +120,7 @@ export default function App() {
 
   return (
     <main>
-      <img src='src/assests/yellow-blob.png' alt='yellow-blob'  className='yellow-blob'/>
+      <img src="https://github.com/SoulCatcher947/Quizzical-App/blob/main/src/images/yellow-blob.png?raw=true" alt='yellow-blob'  className='yellow-blob'/>
       {!quiz ? (
         <div className='start-page'>
           <h1>Quizzical</h1>
@@ -147,7 +147,7 @@ export default function App() {
           </div>
         </div>
       )}
-      <img src='src/assests/blue-blob.png' alt='pink-blob' className='blue-blob'/>
+      <img src="https://github.com/SoulCatcher947/Quizzical-App/blob/main/src/images/blue-blob.png?raw=true" alt='pink-blob' className='blue-blob'/>
     </main>
   );
 }
